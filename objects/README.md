@@ -163,7 +163,7 @@ Of course, we've now lost the ability to refer to the`sum` directly without the 
 
 This concludes our discussion on Objects in Python. You should now understand how to declare, analyze, and use integers, strings, lists, dictionaries, and methods. Below you fill find a set of challenge tasks to help you get started with Objects on your own.
 
-1. Try adding two numbers by directly calling the `__add__` method. Remeber the operator for calling a function is `()` with your parametes comma seperated between the parenthesis.
+1. Try adding two numbers by directly calling the `__add__` method. Remeber the operator for calling a function is `()` with your parameters comma seperated between the parenthesis.
 2. Try subtracting numbers and then try subtracting strings. The `-` operator indicates a subtraction. Try the same for multiplication (`*` operator). See if you can identify which ones worked and why.
 3. Try writing your own decorator function. See if you can use the decorator to modify the context of printing a string to the standard out.
 

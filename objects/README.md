@@ -1,7 +1,11 @@
 # Objects in Python
-The first thing to recognize in Python is that everything exists as an object, even methods exist as objects! The prevalence and importance of Objects in Python is one reason I've chosen to start this course with a detailed discussion of Objects. Before we get ahead of ourselves though, let us begin with the two simplest useful object types, numbers and strings.
+The first thing to recognize in Python is that everything exists as an object, even methods exist as objects! The prevalence and importance of Objects in Python is one reason I've chosen to start this course with a detailed discussion of Objects. Before diving into Objects in Python, let's begin with a discussion of Objects in the abstract.
 
-All Objects have some properties and methods. At a high level, we could say the methods of a number are the mathematical operations we can perform on it. The numeric value could be described as a property of the number object. Let's see this process in action before further examination.
+Imagine you've been put in charge of writing some software for the world's first 100% automated coffee maker. Anything a barista could do, this coffee maker can do. There are a lot of issues to consider here, but I want to focus for a moment on the issue of defining a cup of coffee. One cup of coffee can vary wildly from another while still maintaining the same essential nature. How then can we define a cup of coffee?
+
+One solution would be to treat every cup of coffee as a discrete entity, an Object. Every cup of coffee will have some possibly unique procedure for brewing and dispensing as well as some properties detailing how much milk and what kinds of flavoring to add. This is the essential nature of an object, methods and properties.
+
+Before we get ahead of ourselves though, let us begin with the two simplest useful object types, numbers and strings. At a high level, we could say the methods of a number are the mathematical operations we can perform on it and sole property is the value the number contains. Let's see this process in action before further examination.
 
 [*number-and-strings.py*](numbers-and-strings.py) - Figure 1.1
 ```python
@@ -25,7 +29,9 @@ print(full_message)
 ```commandline
 KrashKourse
 ```
-You may have expected this result. It seems intuitive that strings when added would be concatenated, but how does Python know to perform a concatenation instead of trying to perform numeric addition as we saw earlier? Let's see what's going on "under the hood" here. The `dir()` function provides us with a means to crack open the juicy secrets of our objects. For starters, we'll look inside our integer `a` and our string `message_one`.
+You may have expected this result. It seems intuitive that strings when added would be concatenated, but how does Python know to perform a concatenation instead of trying to perform numeric addition as we saw earlier? Let's see what's going on "under the hood" here. Python provides us with the `dir()` function to inspect the properties and methods of our Objects. For now think of `dir()` as a method of every Python object which just results in some information about the content of the object.
+
+For starters, we'll look inside our integer `a` and our string `message_one`. See if you can identify what some of the methods and properties of these objects might do for us. Right now our particular interest is in what happens when we add.
 
 [*number-and-strings.py*](numbers-and-strings.py) - Figure 1.3
 ```python
@@ -40,9 +46,11 @@ print(message_one.__add__)
 <method-wrapper '__add__' of int object at 0x8a48e0>
 <method-wrapper '__add__' of str object at 0x7f476dccc1b8>
 ```
-We can see here that both objects have unique instances of a method called `__add__`. The definition of `__add__` is unique to each object and so their functionality is entirely independent. This `__add__` method is invoked whenever python encounters the `+` operator. Similarly, the `__repr__` method is invoked whenever python encounters the `print()` function.
+We can see here that both objects have unique instances of a method called `__add__`. The definition of `__add__` is unique to each object and so their functionality is entirely independent. This `__add__` method is invoked whenever python encounters the `+` operator. Specifically, the `+` operator is calling the `__add__` method of the first term and passing the second term as an argument.
 
-Now that we've seen the basic nature and methodology of Python Objects. Let's see some of the other important Objects Python provides us to play with out of the box. I won't be covering the detailed functioning of these Objects as this is already well documented [here](https://docs.python.org/3/). From here on, I will only be introducing the basic function and use case of Objects.
+Similarly, the `__repr__` method is invoked whenever python encounters the `print()` function. This function in particular draws a striking parallel to our coffee example from earlier. The implementation of `__repr__` tells our "coffee machine" how to dispense the coffee to us.
+
+Now that we've seen the basic nature and methodology of Python Objects. Let's see some of the other important Objects Python provides us to play with out of the box. I won't be covering the detailed functioning of these Objects as this is already well documented [here](https://docs.python.org/3/). From here on, I will only be introducing the basic function and use case of these Objects as Objects.
 
 [*lists-and-dicts.py*](lists-and-dicts.py) - Figure 2.1
 ```python

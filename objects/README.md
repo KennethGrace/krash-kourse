@@ -3,7 +3,7 @@ The first thing to recognize in Python is that everything exists as an object, e
 
 All Objects have some properties and methods. At a high level, we could say the methods of a number are the mathematical operations we can perform on it. The numeric value could be described as a property of the number object. Let's see this process in action before further examination.
 
-[*number-and-strings.py*](/krash-kourse/objects/numbers-and-strings.py) - Figure 1.1
+[*number-and-strings.py*](numbers-and-strings.py) - Figure 1.1
 ```python
 a = 1
 b = 2
@@ -15,7 +15,7 @@ print(c)
 ```
 This seems simple enough for numbers, but this same methodology can be extended to all types of objects. For another simple example, let's imagine how a string object handles the addition method. A string can be declared with either double quotes, `""`, or single quotes, `''`, and represents an ordered set of letters. As such a string has no direct numeric value, so it may be confusing at first how a numeric operator like addition can even apply to a string.
 
-[*number-and-strings.py*](/krash-kourse/objects/numbers-and-strings.py) - Figure 1.2
+[*number-and-strings.py*](numbers-and-strings.py) - Figure 1.2
 ```python
 message_one = 'Krash'
 message_two = "Kourse"
@@ -27,7 +27,7 @@ KrashKourse
 ```
 You may have expected this result. It seems intuitive that strings when added would be concatenated, but how does Python know to perform a concatenation instead of trying to perform numeric addition as we saw earlier? Let's see what's going on "under the hood" here. The `dir()` function provides us with a means to crack open the juicy secrets of our objects. For starters, we'll look inside our integer `a` and our string `message_one`.
 
-[*number-and-strings.py*](/krash-kourse/objects/numbers-and-strings.py) - Figure 1.3
+[*number-and-strings.py*](numbers-and-strings.py) - Figure 1.3
 ```python
 print(dir(a))
 print(dir(message_one))
@@ -44,7 +44,7 @@ We can see here that both objects have unique instances of a method called `__ad
 
 Now that we've seen the basic nature and methodology of Python Objects. Let's see some of the other important Objects Python provides us to play with out of the box. I won't be covering the detailed functioning of these Objects as this is already well documented [here](https://docs.python.org/3/). From here on, I will only be introducing the basic function and use case of Objects.
 
-[*lists-and-dicts.py*](/krash-kourse/objects/lists-and-dicts.py) - Figure 2.1
+[*lists-and-dicts.py*](lists-and-dicts.py) - Figure 2.1
 ```python
 a = []
 print(dir(a))
@@ -59,7 +59,7 @@ print(a)
 ```
 Here we see an example of a list object. I will leave the functioning of a list's `__add__` method as an exercise for the reader. A list is a type of "collection" in Python which permits us to store an ordered set of Objects. We will not be discussing what a collection is or ideas like inheritance here. What is important to note is a list may contain different types of objects including other lists! Lists are created and accessed using the `[]` operator or iteration (covered in Section 2).
 
-[*lists-and-dicts.py*](/krash-kourse/objects/lists-and-dicts.py) - Figure 2.2
+[*lists-and-dicts.py*](lists-and-dicts.py) - Figure 2.2
 ```python
 a.append(42)
 a.append(['I', 'am', 'a', 'list'])
@@ -75,7 +75,7 @@ Take note that the index of the list is 0-based. The Object in the list you may 
 
 What happens if the data we want to store isn't ordered? One option is the dictionary Object. A dictionary is a collection indexed by "keys" instead of integers. A dictionary is declared using the `{}` operator and accessed with the `[]` operator. Interestingly a "key" can be any "hash-able" object. To be "hash-able" a Python objects needs only hold an implementation of `__hash__`.
 
-[*lists-and-dicts.py*](/krash-kourse/objects/lists-and-dicts.py) - Figure 2.3
+[*lists-and-dicts.py*](lists-and-dicts.py) - Figure 2.3
 ```python
 b = {}
 b[22] = a
@@ -97,7 +97,7 @@ An astute reader may notice that the list Object does seem to have an implementa
 
 There are several other interesting object types we have left to cover. As with most languages you can even create your own custom Object types. We will instead continue with a discussion which is central to Python, but which is typically left out from introductory courses on the subject. Please observe the following figure;
 
-[*methods.py*](/krash-kourse/objects/methods.py) - Figure 3.1
+[*methods.py*](methods.py) - Figure 3.1
 ```python
 def does_nothing():
     return 1
@@ -118,7 +118,7 @@ This is a method. It represents some form of work we'd like to do. The basic syn
 What does this mean for us though? Well, firstly, this means we can pass functions as arguments to other functions for their own use. An exstension of this fact allows us to dynamically modify the context of a function by wrapping it in another function. This is known as decoration. See if you can identify the behavior of the below figure.
 
 
-[*methods.py*](/krash-kourse/objects/methods.py) - Figure 3.2
+[*methods.py*](methods.py) - Figure 3.2
 ```python
 def ensure_integers(func):
     def wrapper(*args):
@@ -148,7 +148,7 @@ There is a lot of new information to unpack here. Ignore the `for` statement and
 
 There is a bit of special syntax for decoration which was left absent in the above figure for clarity. We typically declare decoration like so;
 
-[*methods.py*](/krash-kourse/objects/methods.py) - Figure 3.3
+[*methods.py*](methods.py) - Figure 3.3
 ```python
 @ensure_integers
 def sum(a, b):

@@ -121,7 +121,7 @@ print(does_nothing())
 <method-wrapper '__call__' of function object at 0x7fcfcd481d08>
 1
 ```
-This is a method. It represents some form of work we'd like to do. The basic syntax should be fairly clear. We begin with the keyword `def` followed by our method's name. Then we denote arguments of a function as comma-seperated variables in between the parenthesis of the defintion. More importantly the method is actually an object! The invoking of the `__call__` method occurs when we use the `()` operator.
+This is a method. It represents some form of work we'd like to do. The basic syntax should be fairly clear. We begin with the keyword `def` followed by our method's name. Then we denote arguments of a function as comma-separated variables in between the parenthesis of the definition. More importantly the method is actually an object! The invoking of the `__call__` method occurs when we use the `()` operator.
 
 What does this mean for us though? Well, firstly, this means we can pass functions as arguments to other functions for their own use. An extension of this fact allows us to dynamically modify the context of a function by wrapping it in another function. This is known as decoration. See if you can identify the behavior of the below figure.
 

@@ -123,7 +123,7 @@ print(does_nothing())
 ```
 This is a method. It represents some form of work we'd like to do. The basic syntax should be fairly clear. We begin with the keyword `def` followed by our method's name. Then we denote arguments of a function as comma-seperated variables in between the parenthesis of the defintion. More importantly the method is actually an object! The invoking of the `__call__` method occurs when we use the `()` operator.
 
-What does this mean for us though? Well, firstly, this means we can pass functions as arguments to other functions for their own use. An exstension of this fact allows us to dynamically modify the context of a function by wrapping it in another function. This is known as decoration. See if you can identify the behavior of the below figure.
+What does this mean for us though? Well, firstly, this means we can pass functions as arguments to other functions for their own use. An extension of this fact allows us to dynamically modify the context of a function by wrapping it in another function. This is known as decoration. See if you can identify the behavior of the below figure.
 
 
 [*methods.py*](methods.py) - Figure 3.2
@@ -153,6 +153,8 @@ None
 <function ensure_integers.<locals>.wrapper at 0x7f9e0de13e18>
 ```
 There is a lot of new information to unpack here. Ignore the `for` statement and the `*args` variable for the time being. The key information to glean here is the relationship between `sum` and `ensure_integers`. We are giving `ensure_integers` our `sum` object and it is giving us back a completely new method object.
+
+What does this mean for our "coffee machine"? Imagine we need to dispense our flavor shots only after every cup is done brewing. We can decorate our dispensing method with the work necessary to dispense flavor shots. This way we only need to implement our flavor dispensing code once and we can apply it to all our coffee dispensing code universally.
 
 There is a bit of special syntax for decoration which was left absent in the above figure for clarity. We typically declare decoration like so;
 

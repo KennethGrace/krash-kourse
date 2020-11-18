@@ -3,7 +3,7 @@ The first thing to recognize in Python is that everything exists as an object, e
 
 Imagine you've been put in charge of writing some software for the world's first 100% automated coffee maker. Anything a barista could do, this coffee maker can do. There are a lot of issues to consider here, but I want to focus for a moment on the issue of defining a cup of coffee. One cup of coffee can vary wildly from another while still maintaining the same essential nature. How then can we define a cup of coffee?
 
-One solution would be to treat every cup of coffee as a discrete entity, an Object. Every cup of coffee will have some possibly unique procedure for brewing and dispensing as well as some properties detailing how much milk and what kinds of flavoring to add. This is the essential nature of an object, methods and properties.
+One solution would be to treat every cup of coffee as a discrete entity, an Object. Every cup of coffee will have some possibly unique procedure for brewing and dispensing as well as some properties detailing how much milk and what kinds of flavoring to add. Think about the difference between an Americano, a Latte, and a Macchiato. This is the essential nature of an object, methods and properties.
 
 Before we get ahead of ourselves though, let us begin with the two simplest useful object types, numbers and strings. At a high level, we could say the methods of a number are the mathematical operations we can perform on it and sole property is the value the number contains. Let's see this process in action before further examination.
 

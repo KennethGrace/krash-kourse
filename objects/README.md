@@ -1,5 +1,5 @@
 # Objects in Python
-The first thing to recognize in Python is that everything exists as an object, even methods exist as objects! The prevalence and importance of Objects in Python is one reason I've chosen to start this course with a detailed discussion of Objects. Before we get ahead of ourselves though, let us begin with the two simplest useful object types numbers and strings.
+The first thing to recognize in Python is that everything exists as an object, even methods exist as objects! The prevalence and importance of Objects in Python is one reason I've chosen to start this course with a detailed discussion of Objects. Before we get ahead of ourselves though, let us begin with the two simplest useful object types, numbers and strings.
 
 All Objects have some properties and methods. At a high level, we could say the methods of a number are the mathematical operations we can perform on it. The numeric value could be described as a property of the number object. Let's see this process in action before further examination.
 
@@ -161,9 +161,9 @@ print(sum)
 ```
 Of course, we've now lost the ability to refer to the`sum` directly without the wrapping work performed by `ensure_integers`. In some situations this may be undesirable, but as you grow your understanding of Objects you may discover the remedy to this issue. 
 
-This concludes our discussion on Objects in Python. You should now understand how to declare, analyze, and use integers, strings, lists, dictionaries, and methods. Below you fill find a set of challenge tasks to help you get started with Objects on your own.
+This concludes our discussion on Objects in Python. You should now understand how to declare, analyze, and use integers, strings, lists, dictionaries, and methods. Below you will find a set of challenge tasks to help you get started with Objects on your own.
 
-1. Try adding two numbers by directly calling the `__add__` method. Remeber the operator for calling a function is `()` with your parameters comma seperated between the parenthesis.
+1. Try adding two numbers by directly calling the `__add__` method. Remember the operator for calling a function is `()` with your parameters comma seperated between the parenthesis.
 2. Try subtracting numbers and then try subtracting strings. The `-` operator indicates a subtraction. Try the same for multiplication (`*` operator). See if you can identify which ones worked and why.
 3. Try writing your own decorator function. See if you can use the decorator to modify the context of printing a string to the standard out.
 

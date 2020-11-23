@@ -5,10 +5,20 @@ The fundamental conditional is the `if` statement. When paired with an `else` cl
 
 ```python
 condition = True
+print(dir(condition))
 if condition:
     print("The statement was true.")
 else:
     print("The statement was false.")
 ```
 
+```python
+a = 2
+b = 5
+condition = a > 5
+if condition:
+    print("Condition is true.")
+else:
+    print("Condition is false.")
+```
 

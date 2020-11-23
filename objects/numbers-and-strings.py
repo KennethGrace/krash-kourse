@@ -15,5 +15,7 @@ print(full_message)
 # Figure 1.3
 print(dir(a))
 print(dir(message_one))
+
+# Figure 1.4
 print(a.__add__)
 print(message_one.__add__)

@@ -15,7 +15,7 @@ python --version
 Now you can use Git to retrieve this repository, so you may run the provided programs and make your own changes. Run the following command in a directory of your choosing.
 
 ```commandline
-git clone https://github.com/KennethGrace/dyscovery.git
+git clone https://github.com/KennethGrace/krash-kourse.git
 ```
 
 Finally, to validate everything is running as it should be try running the `hello-world.py` script located in the root of this directory.
